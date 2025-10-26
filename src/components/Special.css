@@ -1,0 +1,124 @@
+
+.special-section {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+  animation: fadeUp 1s ease-out;
+}
+
+.special-section p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.special-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.special-section h2 span {
+  color: #facc15;
+  font-style: italic;
+}
+
+.special-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .special-grid {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.special-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  flex: 1;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.special-card:hover {
+  transform: scale(1.03);
+}
+
+.special-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.special-card:hover img {
+  transform: scale(1.1);
+}
+
+.special-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.special-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.special-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ddd;
+  max-width: 80%;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .special-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .special-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .special-card img {
+    height: 180px;
+  }
+
+  .special-content {
+    padding: 1rem;
+  }
+
+  .special-content p {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+}
